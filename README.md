@@ -8,5 +8,5 @@ A fork of harryf's [node-soupselect](http://github.com/harryf/node-soupselect), 
 
 ## Why not just use node-soupselect?
 
-Since soupselect is hasn't been updated for 9 months, I decided to fork it and continue development in the context of cheerio. I plan to keep it stand-alone from cheerio, so you will be able to use it without using cheerio.
+Since soupselect hasn't been updated for 9 months, I decided to fork it and continue development in the context of cheerio. I plan to keep it stand-alone from cheerio, so you will be able to use it without using cheerio.
 
