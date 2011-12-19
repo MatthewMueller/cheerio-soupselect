@@ -3,16 +3,22 @@
     "version": "0.0.3",
     "engines": {
         "node": ">=0.2.0"
-        },
+    },
     "author": "Matt Mueller <mattmuelle@gmail.com>",
     "url": "http://github.com/harryf/node-soupselect",
     "dependencies": {
         "htmlparser2": "2.x"
     },
+    "devDependencies": {
+        "mocha": "0.x" 
+    },
     "repository" : [
         { "type":"git", "url":"git://github.com/harryf/node-soupselect.git" }
     ],
     "main": "./lib/soupselect",
+    "scripts": {
+        "test": "mocha -u tdd -R list"
+    },
     "license": "MIT",
     "description": "Adds CSS selector support to htmlparser for scraping activities - port of soupselect (python)"
 }
