@@ -26,8 +26,9 @@ look(soupselect.select(dom, "h2[type='awesome'][color='green']"));
 look(soupselect.select(dom, "[type='awesome'][color='blue']"));
 look(soupselect.select(dom, "[color='blue']"));
 look(soupselect.select(dom, "[class~='lol'][class~='cats']"));
-
+look(soupselect.select(dom, "[class~='lol'][class~='cats'][class~='asdf']"));
 console.log("Below should be blank");
 look(soupselect.select(dom, "[class='lol'][class='cats']"));
+look(soupselect.select(dom, "[class='cats']"));
 look(soupselect.select(dom, "h3[color][type='cookie']"));
-
+look(soupselect.select(dom, "[color][type]"));
