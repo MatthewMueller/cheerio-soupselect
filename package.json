@@ -1,13 +1,13 @@
 {
     "name": "cheerio-soupselect",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "engines": {
         "node": ">=0.2.0"
         },
     "author": "Matt Mueller <mattmuelle@gmail.com>",
     "url": "http://github.com/harryf/node-soupselect",
     "dependencies": {
-        "htmlparser2": "1.5.x"
+        "htmlparser2": "2.x"
     },
     "repository" : [
         { "type":"git", "url":"git://github.com/harryf/node-soupselect.git" }
