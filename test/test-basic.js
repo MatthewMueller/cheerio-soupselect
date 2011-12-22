@@ -53,4 +53,25 @@ suite("#select()", function(){
      	assert.deepEqual(li_green.concat(meta), select(dom, "li[type='awesome'][color], [content='text/html; charset=utf-8']"));
      	assert.deepEqual(head.concat(ul_blue), select(dom, "head, ul[color='blue']"));
      });
+     test("should return proper elements based on filter selector", function(){
+        assert.deepEqual(dom, select(dom, ":first"));
+        assert.deepEqual([ul_blue[0].children[0]], select(dom, "#nav li:first"));
+        assert.deepEqual([ul_blue[0].children[0]], select(dom, "#nav li :first"));
+        assert.deepEqual([ul_blue[0].children[0]], select(dom, "ul[color='blue'] li:contains('water')"));
+        assert.deepEqual([ul_blue[0].children[2]], select(dom, "#nav ul[color='blue] li:last"));
+        assert.deepEqual([ul_blue[0].children[2]], select(dom, "#nav ul:first li:last"));
+        assert.deepEqual([], select(dom, "#nav ul:empty"));
+
+        /*
+        assert.deepEqual( ,select(dom, "#nav li:lt(3)"));
+        assert.deepEqual( ,select(dom, "#nav li:eq(3)"));
+        assert.deepEqual( ,select(dom, "#nav li:gt(3)"));
+        assert.deepEqual( ,select(dom, "#nav li:even"));
+        assert.deepEqual( ,select(dom, "#nav li:odd"));
+        */
+     });
+     test("should return proper elements based on nested filter selectors", function(){
+        assert.deepEqual(dom, select(dom, ":odd(:first)"));
+        assert.deepEqual([ul_blue[0].children[0]], select(dom, "#nav li:odd(:contains('water'))"));
+     });
 });
