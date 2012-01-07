@@ -10,7 +10,7 @@
         "htmlparser2": "2.x"
     },
     "devDependencies": {
-        "mocha": "0.x" 
+        "mocha": "0.x"
     },
     "repository" : [
         { "type":"git", "url":"git://github.com/harryf/node-soupselect.git" }
