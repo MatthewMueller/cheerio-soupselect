@@ -1,3 +1,9 @@
+0.1.0 / 2012-01-16
+==================
+
+  * Multiselector support ex. "script, .module, #footer" (siddMahen)
+  * Filter support with ability to define custom filters (siddMahen)
+
 0.0.3 / 2011-12-19
 ==================
 

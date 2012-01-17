@@ -1,6 +1,6 @@
 {
     "name": "cheerio-soupselect",
-    "version": "0.0.3",
+    "version": "0.1.0",
     "engines": {
         "node": ">=0.2.0"
     },
@@ -9,6 +9,9 @@
     "dependencies": {
         "htmlparser2": "2.x"
     },
+    "contributors": [
+      "Siddharth Mahendraker <siddharth_mahen@me.com>"
+    ],
     "devDependencies": {
         "mocha": "0.x"
     },
