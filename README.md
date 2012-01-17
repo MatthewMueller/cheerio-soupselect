@@ -14,7 +14,7 @@ for use with node.js and node-htmlparser.
 
 From the root folder:
 
-    $ mocha -u tdd -R list
+    $ make test
 
 ## Features
 
