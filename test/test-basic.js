@@ -90,4 +90,10 @@ suite("#select()", function(){
         assert.deepEqual(dom, select(dom, ":odd(:first)"));
         assert.deepEqual([ul_blue[0].children[0]], select(dom, "#nav li:odd(:contains('water'))"));
      });
+     test("check case insensitivity", function () {
+        assert.deepEqual(li_green, select(dom, "LI[type='awesome'][color]"));
+        assert.deepEqual(li_green, select(dom, "#menu Li[type='awesome'][color='green']"));
+        // Enable when Attribute names can be case insensitive
+        // assert.deepEqual(li_green, select(dom, "#menu Li[TyPE='awesome'][COLOR='green']"));
+     })
 });
