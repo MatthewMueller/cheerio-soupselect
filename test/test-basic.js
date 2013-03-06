@@ -25,6 +25,8 @@ var hases = [{type:'tag',name:'ul',attribs:{color:'blue'},children:[{type:'tag',
 
 var nots = [{type:'tag',name:'div',attribs:{id:'nav'},children:[{type:'tag',name:'ul',attribs:{color:'blue'},children:[{type:'tag',name:'li',children:[{data:'water',type:'text'}]},{type:'tag',name:'li',children:[{data:'sky',type:'text'}]},{type:'tag',name:'li',children:[{data:'bluebird',type:'text'}]}]},{type:'tag',name:'ul',attribs:{color:'yellow'},children:[{type:'tag',name:'li',children:[{data:'sun',type:'text'}]},{type:'tag',name:'li',children:[{data:'daffodils',type:'text'}]},{type:'tag',name:'li',children:[{data:'leaves',type:'text'}]}]}]},{type:'tag',name:'ul',attribs:{color:'blue'},children:[{type:'tag',name:'li',children:[{data:'water',type:'text'}]},{type:'tag',name:'li',children:[{data:'sky',type:'text'}]},{type:'tag',name:'li',children:[{data:'bluebird',type:'text'}]}]},{type:'tag',name:'ul',attribs:{color:'yellow'},children:[{type:'tag',name:'li',children:[{data:'sun',type:'text'}]},{type:'tag',name:'li',children:[{data:'daffodils',type:'text'}]},{type:'tag',name:'li',children:[{data:'leaves',type:'text'}]}]}];
 
+var li_hello = [];
+
 suite("#select()", function(){
 	test("should return [] when not present", function(){
 		assert.deepEqual([], select(dom, "does_not_exist"));
@@ -89,5 +91,8 @@ suite("#select()", function(){
      test("should return proper elements based on nested filter selectors", function(){
         assert.deepEqual(dom, select(dom, ":odd(:first)"));
         assert.deepEqual([ul_blue[0].children[0]], select(dom, "#nav li:odd(:contains('water'))"));
+     });
+     test("should return proper elements based on class + attribute selectors", function() {
+        assert.deepEqual(li_hello, select(dom, "h3.subtitle[data-language='en']"));
      });
 });
