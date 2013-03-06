@@ -1,5 +1,7 @@
 # cheerio-soupselect
 
+**DEPRECATED: This library has been deprecated in favor of: https://github.com/MatthewMueller/cheerio-select**
+
 A fork of harryf's [node-soupselect]
 (http://github.com/harryf/node-soupselect),
 which is originally a port of Simon Willison's
